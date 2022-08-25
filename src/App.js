@@ -1,23 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useEffect } from "react";
+import Navbar from "./Components/NavBar";
 
 function App() {
+
+  let [ darkMode, setDarkMode ] = useState(true);
+
+  // Dark mode toggle. 
+  useEffect(() => {
+    let root = document.querySelector(':root');
+    if (!darkMode) {
+      root.classList.add("dark");
+      root.classList.remove("light");
+
+    } else {
+      root.classList.remove("dark");
+      root.classList.add("light");
+
+    }
+  }, [darkMode]);
+
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Navbar darkMode = {darkMode} setDarkMode = {setDarkMode}/>
     </div>
   );
 }
