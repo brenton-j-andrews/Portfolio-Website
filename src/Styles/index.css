@@ -16,6 +16,11 @@
     src: url("../Assets/Fonts/Lato-Bold.ttf");
 }
 
+@font-face {
+    font-family: Hero-Name;
+    src: url("../Assets/Fonts/Hero-Name.ttf");
+}
+
 :root { 
     --color-gray-100: #F8F8F8;
     --color-gray-200: #D3D3D3;
@@ -46,10 +51,12 @@
 
     --ff-heading-regular: "Lato-Regular";
     --ff-heading-bold: "Lato-Bold";
+    --ff-hero-name: "Hero-Name";
 
     --fs-400: 1rem;
     --fs-500: 1.25rem;
     --fs-700: 1.5rem;
+    --fs-900: 4rem;
 }
 
 :root.light {
@@ -72,6 +79,7 @@
 html, body {
     font-size: 1em;
     height: 100%;
+    transition: background-color 1s;
 }
 
 body {
@@ -79,10 +87,12 @@ body {
     color: var(--nav-text-color);
 }
 
+
 .App {
     display: flex;
     flex-direction: column;
     align-items: center;
+    max-width: 1600px;
 }
 
 /*
@@ -114,8 +124,6 @@ body {
     padding: 10px;
     transition: background-color .5s ease, color .5s ease;
 }
-
-
 
 .primary-nav-bar a:hover {
     background-color: var(--nav-background-color-hover);
@@ -186,4 +194,20 @@ body {
         float: none;
         display: block;
     }
+}
+
+/*
+*** Hero Styling
+*/
+
+.hero-name {
+    font-family: var(--ff-hero-name);
+    font-size: var(--fs-900);
+    color: var(--nav-text-color);
+}
+
+.hero-title {
+    font-family: var(--ff-heading-bold);
+    font-size: var(--fs-700);
+    color: var(--nav-text-color);
 }

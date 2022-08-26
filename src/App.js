@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from "react";
 import Navbar from "./Components/NavBar";
+import Hero from "./Components/Hero";
+
+import me from "./Assets/Images/Home/me.png";
 
 function App() {
 
@@ -23,6 +26,7 @@ function App() {
   return (
     <div className="App">
       <Navbar darkMode = {darkMode} setDarkMode = {setDarkMode}/>
+      <Hero />
     </div>
   );
 }
