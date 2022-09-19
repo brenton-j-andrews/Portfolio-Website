@@ -1,4 +1,11 @@
-import React, {useState, useEffect} from "react";
+import React, {useState} from "react";
+
+import { 
+    languageIcons,
+    generalIcons, 
+    frontEndIcons,
+    backendIcons
+} from "../Assets/icon_object";
 
 const About = () => {
 
@@ -29,7 +36,57 @@ const About = () => {
             }
 
             {displayMode == "skills" &&
-                <div> Skills </div>
+                <div className="about-content skills">
+        
+                    <div className="skill-column">
+                        <h3>Languages</h3>
+                        {languageIcons.map((icon) => {
+                            return (
+                                <div className="skill-unit"> 
+                                    <img src={icon.icon_src} className="skill-icon"></img>
+                                    <p> {icon.icon_title} </p>
+                                </div>
+                            )
+                        })}
+                    </div>
+
+                    <div className="skill-column">
+                        <h3>General Skills</h3>
+                        {generalIcons.map((icon) => {
+                            return (
+                                <div className="skill-unit"> 
+                                    <img src={icon.icon_src} className="skill-icon"></img>
+                                    <p> {icon.icon_title} </p>
+                                </div>
+                            )
+                        })}
+                    </div>
+
+                    <div className="skill-column">
+                        <h3>Front End</h3>
+                        {frontEndIcons.map((icon) => {
+                            return (
+                                <div className="skill-unit"> 
+                                    <img src={icon.icon_src} className="skill-icon"></img>
+                                    <p> {icon.icon_title} </p>
+                                </div>
+                            )
+                        })}
+                    </div>
+
+                    <div className="skill-column">
+                        <h3>Back End</h3>
+                        {backendIcons.map((icon) => {
+                            return (
+                                <div className="skill-unit"> 
+                                    <img src={icon.icon_src} className="skill-icon"></img>
+                                    <p> {icon.icon_title} </p>
+                                </div>
+                            )
+                        })}
+                    </div>
+                    
+                </div>
             }
 
             {displayMode == "hobbies" &&

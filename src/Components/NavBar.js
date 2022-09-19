@@ -22,10 +22,8 @@ const Navbar = ({darkMode, setDarkMode}) => {
             <a className="home-link" href="/">Home</a>
 
             <div className="nav-bar-right">
-                <a href="/about">About</a>
+                <a href="/about">Blog</a>
                 <a href="/projects">Projects</a>
-                <a href="/contact">Contact</a>
-                <a href="/hobbies">Hobbies</a>
 
                 <button onClick={() => {setDarkMode(!darkMode)}} className="dark-mode-toggle"> 
                     { darkMode ? <img src={moon} alt="dark mode"></img> :  <img src={sun} alt="light mode"></img> }  

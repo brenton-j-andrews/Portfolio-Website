@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Navbar from "./Components/NavBar";
+import Hero from "./Components/Hero";
 import About from "./Components/About";
 import Footer from "./Components/Footer";
 
@@ -27,7 +28,9 @@ function App() {
   return (
     <div className="App">
       <Navbar darkMode = {darkMode} setDarkMode = {setDarkMode}/>
+      <Hero />
       <About />
+      <Footer />
     </div>
   );
 }

@@ -3,8 +3,10 @@ import React from "react";
 const Hero = () => {
     return (
         <section className="hero">
-            <p className="hero-name"> Brenton Andrews </p>
-            <p className="hero-title"> Aspiring Fullstack Developer (Aspiring) </p>
+            <div className="hero-main">
+                <p className="hero-name"> Brenton Andrews </p>
+                <p className="hero-sub"> Aspiring Fullstack Developer </p>
+            </div>
         </section>
     )
 }
