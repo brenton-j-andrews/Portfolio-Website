@@ -53,27 +53,42 @@
     --ff-heading-bold: "Lato-Bold";
     --ff-hero-name: "Hero-Name";
 
+    --fs-300: .75rem;
     --fs-400: 1rem;
     --fs-500: 1.25rem;
-    --fs-700: 1.5rem;
+    --fs-600: 1.5rem;
+    --fs-700: 2rem;
     --fs-900: 4rem;
 }
 
 :root.light {
     --primary-background: var(--color-gray-100);
+    --primary-body-background: var(--color-gray-200);
 
     --nav-text-color: var(--color-gray-900);
     --nav-text-color-hover: var(--color-gray-100);
+
     --nav-background-text-color: var(--color-gray-200);
     --nav-background-color-hover: var(--color-gray-700);
+
+    --content-background-color: var(--color-gray-200);
+
+    --active-tab-color: var(--color-success-700);
+    --unactive-tab-color-hover: var(--color-success-500);
 }
 
 :root.dark {
     --primary-background: var(--color-gray-900);
+    --primary-body-background: var(--color-gray-700);
 
     --nav-text-color: var(--color-gray-100);
     --nav-text-color-hover: var(--color-gray-900);
     --nav-background-color-hover: var(--color-gray-100);
+
+    --content-background-color: var(--color-gray-700);
+
+    --active-tab-color: var(--color-accent-700);
+    --unactive-tab-color-hover: var(--color-accent-500);
 }
 
 html, body {
@@ -82,9 +97,14 @@ html, body {
     transition: background-color 1s;
 }
 
+#root {
+    justify-content: center;
+    height: 100%;
+}
+
 body {
-    background-color: var(--primary-background);
     color: var(--nav-text-color);
+    background-color: var(--primary-body-background);
 }
 
 
@@ -92,7 +112,11 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    margin: 0 auto;
     max-width: 1600px;
+    min-height: 100%;
+    background-color: var(--primary-background);
 }
 
 /*
@@ -111,7 +135,7 @@ body {
 
 .primary-nav-bar a {
     font-family: var(--ff-heading-regular);
-    font-size: var(--fs-700);
+    font-size: var(--fs-600);
 
     color: var(--nav-text-color);
 
@@ -208,6 +232,73 @@ body {
 
 .hero-title {
     font-family: var(--ff-heading-bold);
+    font-size: var(--fs-600);
+    color: var(--nav-text-color);
+}
+
+
+/*
+*** About Section Styling
+*/
+
+.about-wrapper {
+    width: 90%;
+}
+
+.section-title-wrapper {
+    margin-bottom: 1rem;
+}
+
+.section-title {
     font-size: var(--fs-700);
     color: var(--nav-text-color);
+    margin-bottom: 5px;
+}
+
+.section-title-number {
+    font-size: var(--fs-400);
+    color: var(--nav-text-color);
+}
+
+.section-tab-nav {
+    display: flex;
+    align-items: center;
+}
+
+.tab {
+    background-color: var(--primary-background);
+    border: none;
+    font-size: var(--fs-300);
+    color: var(--nav-text-color);
+    margin-right: 10px;
+}
+
+.unactive-tab:hover {
+    color: var(--unactive-tab-color-hover);
+    transform: scale(1.25);
+}
+
+.active-tab {
+    font-size: var(--fs);
+    font-weight: bolder;
+    color: var(--active-tab-color);
+}
+
+.about-content {
+    padding: 5px;
+    background-color: var(--content-background-color);
+}
+
+.about-text {
+    font-size: var(--fs-500);
+}
+
+/*
+*** Footer Styling
+*/
+
+.footer {
+    font-family: var(--ff-heading-regular);
+    margin-top: auto;
+    margin-bottom: 50px;
 }
